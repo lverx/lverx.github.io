@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Redirecting...</title>
-    <script type="text/javascript">
-        window.location.href = "mailto:sky@lverx.xyz";
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const link = params.get("link") || "https://default-link.com"; 
+
+        window.location.href = link;
     </script>
+    <script src="Custom Code/Important Text/imptxt.js"></script>
 </head>
+<body>
+    <p>If you are not redirected, <a id="redirect-link" href="#">click here</a>.</p>
+    <imptxt>Do not manually redirect yourself unless you are not redirected after 10 seconds.</imptxt>
+    <script>
+        document.getElementById("redirect-link").href = link;
+    </script>
+</body>
 </html>
